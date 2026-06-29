@@ -3,13 +3,13 @@ import Header from "./Header"
 import { checkValidaData } from "../utils/validate";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router";
+
 import { useDispatch } from "react-redux";
 
 
 const Login = () => {
-    const dispatch=useDispatch()
-    const navigate = useNavigate()
+    const dispatch = useDispatch()
+   
     const [isSignInForm, setIsSignInForm] = useState(true);
     const [errorMsg, setErrorMsg] = useState(null)
     const name = useRef(null)
@@ -24,27 +24,26 @@ const Login = () => {
         );
         setErrorMsg(message);
 
-        // If there IS an error, stop execution
+       
         if (message) return;
 
-        // Otherwise, proceed with Firebase auth
         if (!isSignInForm) {
             // Sign up logic
             createUserWithEmailAndPassword(
                 auth,
-                 email.current.value, 
-                 password.current.value
-                )
+                email.current.value,
+                password.current.value
+            )
                 .then((userCredential) => {
 
-                   updateProfile(auth.currentUser, {
+                    updateProfile(auth.currentUser, {
                         displayName: name.current.value, photoURL: "https://www.pngkey.com/png/full/72-729716_user-avatar-png-graphic-free-download-icon.png"
                     }).then(() => {
-                         const {uid, email, displayName, photoURL} = auth.currentUser;
-                            dispatch(addUser({ uid: uid, email: email, displayName: displayName , photoURL: photoURL , }))
-                        navigate("/browse")
+                        const { uid, email, displayName, photoURL } = auth.currentUser;
+                        dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL, }))
+                       
                     }).catch((error) => {
-                        // An error occurred
+                       
                         setErrorMsg(error.message)
                     });
                 })
@@ -57,7 +56,7 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    navigate("/browse")
+                    
 
                 })
                 .catch((error) => {
