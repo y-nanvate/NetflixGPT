@@ -4,3 +4,16 @@ export const LOGO_URL ="https://help.nflxext.com/helpcenter/OneTrust/oneTrust_pr
 export const  BACKGROUND_URL="https://assets.nflxext.com/ffe/siteui/vlv3/435e8bb8-7f1b-49cb-8da8-bff997124294/web/IN-en-20260511-TRIFECTA-perspective_ec39852e-0b48-4e8a-b415-dd8376cd83ce_large.jpg"
 
 export  const PHOTO_URL="https://www.pngkey.com/png/full/72-729716_user-avatar-png-graphic-free-download-icon.png"
+
+export const API_OPTIONS= {
+    method :"GET",
+    headers:{
+        accept:"application/json",
+        Authorization: 
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMmJkYTZlNzQzMGMxNmFiODdlZWExMjUyNDYwNThkNiIsIm5iZiI6MTc4MjczMTUyMy43NzcsInN1YiI6IjZhNDI1MzAzOTJlNzJkOGU0YTk2YjdmYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.hH2rXNoXO6ybEielgEYqjlr9TdSxuMM6-s6U0u6bfNI"
+    }
+    
+}
+
+     export const now_playing_url = "https://api.themoviedb.org/3/movie/now_playing?page=1"
+   
