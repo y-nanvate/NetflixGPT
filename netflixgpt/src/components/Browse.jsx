@@ -11,7 +11,6 @@ const Browse =()=>{
 
     return<>
     <Header/>
-    <h1>Browse</h1>
     <MainContainer/>
     <SecondaryContainer/>
     </>

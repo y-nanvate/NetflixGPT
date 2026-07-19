@@ -16,4 +16,4 @@ const useNowPlayingMovies = () => {
     getNowPlayingMovie();
   }, []);
 };
-export default useNowPlayingMovies;
+export default useNowPlayingMovies; 

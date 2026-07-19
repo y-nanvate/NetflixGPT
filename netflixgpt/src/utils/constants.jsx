@@ -5,6 +5,8 @@ export const  BACKGROUND_URL="https://assets.nflxext.com/ffe/siteui/vlv3/435e8bb
 
 export  const PHOTO_URL="https://www.pngkey.com/png/full/72-729716_user-avatar-png-graphic-free-download-icon.png"
 
+export const Icon = "https://icons8.com/icon/9ZAO_U356VVd/man-in-tuxedo"
+
 export const API_OPTIONS= {
     method :"GET",
     headers:{
